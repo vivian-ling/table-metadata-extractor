@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import table_metadata_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('metadata/', table_metadata_view, name='table_metadata')
 ]
